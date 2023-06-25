@@ -1,0 +1,36 @@
+{
+  "name": "pyv-api-server",
+  "version": "0.5.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "lint": "eslint src --ext ts --report-unused-disable-directives --max-warnings 0 --fix",
+    "format": " prettier --write ./src",
+    "dev": "ts-node-dev --respawn --transpile-only src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/morgan": "^1.9.4",
+    "@types/node": "^20.3.1",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard-with-typescript": "^34.0.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "prettier": "2.8.8",
+    "supabase": "^1.68.6",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "5.1.3"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.25.0",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  }
+}
