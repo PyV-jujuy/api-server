@@ -12,5 +12,6 @@ const repository = new PadronRepository()
 const controller = new PadronController(repository)
 
 PadronRouter.get(url.PATH, controller.routeHandler)
+PadronRouter.get(url.withParam('page'), controller.routeHandler)
 
 export default PadronRouter
