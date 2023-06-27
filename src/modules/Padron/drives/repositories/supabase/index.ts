@@ -25,7 +25,6 @@ export default class PadronRepository implements GetByIDRepository {
 
     if (error) throw new Error(error.message)
 
-    console.log(_count)
     const count = _count ?? 0
     const pages = Math.ceil(count / PAGE_SIZE)
 
