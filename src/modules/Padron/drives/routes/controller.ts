@@ -15,8 +15,13 @@ export default class PadronController extends Controller {
   async routeHandler(req: Request, res: Response): Promise<void> {
     const service = new SearchPerson(this.repository)
     const person = req.body
+    const { page: _page } = req.params
 
-    const result = await service.run(person)
+    const page = Number(_page)
+
+    let result
+    if (isNaN(page)) result = await service.run(person)
+    else result = await service.run(person, page)
 
     res.send(result)
   }
