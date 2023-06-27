@@ -18,7 +18,7 @@ export default class PadronRepository implements GetByIDRepository {
       error,
       count: _count,
     } = await SUPABASE_CLIENT.from('padronjujuy2023')
-      .select('*')
+      .select('*', { count: 'exact' })
       .match(person)
       .range((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
       .limit(PAGE_SIZE)
