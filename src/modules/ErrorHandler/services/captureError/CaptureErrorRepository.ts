@@ -1,5 +1,5 @@
-import type Error from '../../core/Error'
+import type ErrorCode from '../../core/ErrorCode'
 
 export default abstract class Repository {
-  abstract save(error: Error): Promise<void>
+  abstract save(error: ErrorCode): Promise<void>
 }

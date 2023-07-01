@@ -1,5 +1,5 @@
 import type { Request, Response } from 'express'
-import { Error as ErrorCode } from '../../core'
+import { ErrorCode } from '../../core'
 import { CaptureError } from '../../services/captureError'
 
 const capture = new CaptureError()

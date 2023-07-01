@@ -1,4 +1,4 @@
-export default class Error {
+export default class ErrorCode {
   readonly date: Date = new Date(Date.now())
   constructor(
     readonly code: number,
