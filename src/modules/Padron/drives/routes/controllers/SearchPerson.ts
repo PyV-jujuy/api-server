@@ -1,12 +1,12 @@
 import { Request, Response } from 'express'
-import SearchPerson from '../../services/SearchPerson/SearchPerson'
-import Controller from '../../../shared/types/controllers'
-import ErrorHandler from '../../../ErrorHandler/drives/decorator/ErrorHandler'
-import type { SearchPersonRepository } from '../../services/SearchPerson'
+import SearchPerson from '../../../services/SearchPerson/SearchPerson'
+import Controller from '../../../../shared/types/controllers'
+import ErrorHandler from '../../../../ErrorHandler/drives/decorator/ErrorHandler'
+import type { SearchPersonRepository } from '../../../services/SearchPerson'
 
 interface Repository extends SearchPersonRepository {}
 
-export default class PadronController extends Controller {
+export default class PersonController extends Controller {
   constructor(private readonly repository: Repository) {
     super()
   }
